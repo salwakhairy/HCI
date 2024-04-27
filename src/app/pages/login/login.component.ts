@@ -28,7 +28,7 @@ export class LoginComponent {
         localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
         this.router.navigateByUrl('/home');
       } else {
-        this.toastr.success("No User Found");
+        this.toastr.error("No User Found");
       }
     }
   }
