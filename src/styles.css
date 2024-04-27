@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+* Add application styles & imports to this file! */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+@import url('../node_modules/simple-keyboard/build/css/index.css');
+@import 'ngx-toastr/toastr';
+body{
+  
+ 
+}
+.container-fluid
+{
+  background-color: #EEE6DE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   height: 100vh;
+   
+}
+.auth-card {
+  background: #c59d79;  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #240b36, #A47245);  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #240b36, #A47245); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 400px;
+  margin: 0 auto 0 -200px;
+  border: 5px solid #522c08;
+  padding: 30px;
+  border-color: #522c08;
+  border-radius: 15px;
+}
+
+label{
+  color: black;
+  font-weight: 700;
+  text-align: start;
+  padding: 10px;
+}
+.user-image{
+  height: 80px;
+}
+.auth-avatar{
+  text-align: center;
+  margin-top: -70px;
+}
+.auth{
+  margin-top: 35px;
+  border: none;
+  border-radius: 6px;
+}
+.btn-my{
+  background-color: #875222;
+  border-color: black;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+}
+.simple-keyboard {
+  max-width: 850px;
+}
+.toast {
+  position: fixed;
+  top: 0px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensure the toast appears above other elements */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.toast-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.toast-error {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.toast-success {
+  background-color: #4caf50;
+}
+
+.toast-title {
+  color: #fff;
+}
+
+.toast-message {
+  color: #fff;
+}
+

@@ -1,0 +1,14 @@
+.login{
+    color: black;
+  }
+  .login a{
+    color: black;
+    font-weight: bold;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .empty {
+    border: 1px solid red; /* Change border color to red */
+    /* Or you can use background color */
+    /* background-color: #ffcccc; */
+  }

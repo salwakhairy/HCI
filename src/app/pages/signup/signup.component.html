@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+    <div class="card auth">
+      <div class="card-body auth-card">
+        <div class="auth-avatar">
+          <img src="https://cdn1.iconfinder.com/data/icons/instagram-ui-flat/48/Instagram_UI-17-512.png" alt="user" class="user-image">
+        </div>
+        <form >
+          <div class="form-group">
+            <label for="name">Username </label>
+            <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="signUpObj.name"  [ngClass]="{'empty': !signUpObj.name}" required>
+            <!-- Add required attribute for validation -->
+          </div>
+          <div class="form-group">
+            <label for="email">Email  </label>
+            <input type="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="signUpObj.email"  [ngClass]="{'empty': !signUpObj.email}" required>
+           
+          </div>
+          <div class="form-group">
+            <label for="password">Password  </label>
+            <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="signUpObj.password"  [ngClass]="{'empty': !signUpObj.password}" required>
+           
+          </div>
+          <div class="form-group">
+            <label for="c_password">Confirm Password  </label>
+            <input type="password" name="c_password" class="form-control" placeholder="********" [(ngModel)]="signUpObj.c_password" [ngClass]="{'empty': !signUpObj.c_password}" required>
+          
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-my" (click)="onRegister()" >Register</button>
+    
+          </div>
+          <div class="text-center login">
+            Already have an account ? <a routerLink="/login">Login</a> 
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
