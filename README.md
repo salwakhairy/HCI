@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Meal planning
+=======
+#Meal Planning
+>>>>>>> 38e1e381b120f4bae8e7e27b6f88928ef3289dfa
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0-next.0.
 
