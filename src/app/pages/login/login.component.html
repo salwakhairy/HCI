@@ -1,30 +1,30 @@
 <div class="row">
-    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
-      <div class="card auth">
-        <div class="card-body auth-card">
-          <div class="auth-avatar">
-            <img src="https://cdn1.iconfinder.com/data/icons/instagram-ui-flat/48/Instagram_UI-17-512.png" alt="user" class="user-image">
+  <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+    <div class="card auth">
+      <div class="card-body auth-card">
+        <div class="auth-avatar">
+          <img src="https://cdn1.iconfinder.com/data/icons/instagram-ui-flat/48/Instagram_UI-17-512.png" alt="user" class="user-image">
+        </div>
+        <form (submit)="onLogin()">
+          <div class="form-group">
+            <label for="email">Username:</label>
+            <input type="text" name="username" class="form-control" placeholder="username" [(ngModel)]="loginObj.name" [ngClass]="{'empty': !loginObj.name}" required>
           </div>
-          <form (submit)="onLogin()">
-            <div class="form-group">
-              <label for="email">Username:</label>
-              <input type="text" name="username" class="form-control" placeholder="username" [(ngModel)]="loginObj.name" [ngClass]="{'empty': !loginObj.name}" required>
+          <div class="form-group">
+            <label for="password">Password : </label>
+            <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="loginObj.password" [ngClass]="{'empty': !loginObj.password}" required>
+            <div class="text-right forget-pass">
+              <a routerLink="/forget-password">Forget Password ?</a>
             </div>
-            <div class="form-group">
-              <label for="password">Password : </label>
-              <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="loginObj.password" [ngClass]="{'empty': !loginObj.password}" required>
-              <div class="text-right forget-pass">
-                <a routerLink="/forget-password">Forget Password ?</a>
-              </div>
-            </div>
-            <div class="text-center">
-              <input type="submit" class="btn btn-my" value="Login">
-            </div>
-          </form>
-          <div class="text-center sign-up">
-            Don`t have an account ? <a routerLink="/signup">Sign Up</a>
           </div>
+          <div class="text-center">
+            <input type="submit" class="btn btn-my" value="Login">
+          </div>
+        </form>
+        <div class="text-center sign-up">
+          Don`t have an account ? <a routerLink="/signup">Sign Up</a>
         </div>
       </div>
     </div>
   </div>
+</div>

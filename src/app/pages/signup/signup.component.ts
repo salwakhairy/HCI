@@ -1,48 +1,75 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'; // Import Validators for default validation
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css'
+  styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  signUpObj:SignUpModel =new SignUpModel();
-  constructor(private router: Router,private toastr: ToastrService){}
-onRegister() {
-  debugger;
-  const localUser = localStorage.getItem('angular17users');
-  if (this.signUpObj.password !== this.signUpObj.c_password) {
-    this.toastr.error('Password and Confirm Password do not match', 'Error');
+  signUpForm: FormGroup;
+  constructor(private router: Router, private toastr: ToastrService, private formBuilder: FormBuilder) {
+    this.signUpForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, this.emailFormatValidator]],
+      password: ['', [Validators.required, this.passwordStrengthValidator]],
+      c_password: ['', Validators.required]
+    });
   }
-  if (this.signUpObj.name=='' || this.signUpObj.email=='' || this.signUpObj.password=='' || this.signUpObj.c_password=='') {
-    this.toastr.error('Please fill in all the fields', 'Error');
-  } 
-  else if(localUser != null) {
-    const users =  JSON.parse(localUser);
-    users.push(this.signUpObj);
-    localStorage.setItem('angular17users', JSON.stringify(users))
+
+  onRegister() {
+    debugger;
+    const localUser = localStorage.getItem('angular17users');
+    const name = this.signUpForm.value.name;
+    const email = this.signUpForm.value.email;
+    const password = this.signUpForm.value.password;
+    const c_password = this.signUpForm.value.c_password;
+  
+    if (!name || !email || !password || !c_password) {
+      this.toastr.error('Please fill in all the fields', 'Error');
+      return;
+    }
+  
+    if (password !== c_password) {
+      this.toastr.error('Password and Confirm Password do not match', 'Error');
+      return;
+    }
+  
+    // Check if the password is weak (less than 8 characters or without both uppercase and lowercase letters)
+    if (!/(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password)) {
+      this.toastr.error('Password is too weak. Please choose a stronger password.', 'Error');
+      return;
+    }
+  
+    // Check if the email format is invalid
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      this.toastr.error('Invalid email format', 'Error');
+      return;
+    }
+  
+    let users = localUser != null ? JSON.parse(localUser) : [];
+    users.push({ name, email, password, c_password });
+    localStorage.setItem('angular17users', JSON.stringify(users));
     this.toastr.success('Registration Success', 'Success');
-  } else  {
-    const users = [];
-    users.push(this.signUpObj);
-    localStorage.setItem('angular17users', JSON.stringify(users))
-    this.toastr.success('Registration Success', 'Success');
+    
+    this.router.navigateByUrl('/login');
   }
-}
-}
+  
 
- export class SignUpModel  {
-  name: string;
-  email: string;
-  password: string;
- c_password: string;
 
-  constructor() {
-    this.email = "";
-    this.name = "";
-    this.password= "";
-    this.c_password=""
+  passwordStrengthValidator(control: FormControl): { [s: string]: boolean } | null {
+    if (!/(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(control.value)) {
+      return { 'passwordWeak': true };
+    }
+    return null;
+  }
+
+  emailFormatValidator(control: FormControl): { [s: string]: boolean } | null {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(control.value)) {
+      return { 'invalidEmailFormat': true };
+    }
+    return null;
   }
 }

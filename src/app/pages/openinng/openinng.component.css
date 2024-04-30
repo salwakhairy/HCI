@@ -1,0 +1,59 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    max-width: 100%;
+    background-size: cover; /* Stretch to fill container while maintaining aspect ratio */
+    background-position: center; /* Optional: Center the image within the container */
+}
+  
+.centered-image {
+    width: 80%; /* Adjust width as needed */
+    max-height: 100%;
+    position: absolute;
+    left: auto; /* Position at left edge */
+    right: auto; /* Remove right positioning */
+}
+
+.button-container {
+    position: absolute;
+    bottom: 35px; /* Adjust the distance from the bottom as needed */
+    right: 200px; /* Adjust the distance from the right as needed */
+    margin-right: 20px; /* Add some margin to move the buttons to the left */
+}
+  
+.login-button, .signup-button {
+    padding: 15px 70px;
+    margin-left: 10px; /* Add space between buttons */
+    background-color: #875222; /* Example background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+.login-button:hover, .signup-button:hover {
+    background-color: #522c08; /* Example hover background color */
+}
+
+.title {
+    font-family: Atma;
+    font-style:oblique;
+    font-size: 40px;
+    color:white;
+    position: absolute; /* Position the text element absolutely */
+    top: 70%; /* Position it 50% from the top */
+    left: 50%; /* Position it 50% from the left */
+    transform: translate(-50%, -50%); /* Center it horizontally and vertically */
+    position: relative; /* Removed absolute positioning */
+    text-align: center; /* Center the text horizontally within its container */
+}
+
+.title-container {
+    position: absolute; /* Position the title container absolutely */
+    bottom: 240px; /* Adjust the distance from the bottom as needed */
+    left: 67%; /* Position it  from the left */
+    transform: translateX(-50%); /* Center it horizontally */
+}

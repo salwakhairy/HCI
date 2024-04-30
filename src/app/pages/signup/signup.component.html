@@ -5,31 +5,33 @@
         <div class="auth-avatar">
           <img src="https://cdn1.iconfinder.com/data/icons/instagram-ui-flat/48/Instagram_UI-17-512.png" alt="user" class="user-image">
         </div>
-        <form >
+        <form #signupForm="ngForm" (ngSubmit)="onRegister()">
           <div class="form-group">
             <label for="name">Username </label>
-            <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="signUpObj.name"  [ngClass]="{'empty': !signUpObj.name}" required>
-            <!-- Add required attribute for validation -->
+            <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="signUpForm.value.name" [ngClass]="{'empty': !signUpForm.value.name}" required>
+            <div *ngIf="signupForm.submitted && signupForm.controls['name'].errors?.['required']" class="text-danger">Name is required</div>
           </div>
           <div class="form-group">
             <label for="email">Email  </label>
-            <input type="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="signUpObj.email"  [ngClass]="{'empty': !signUpObj.email}" required>
-           
+            <input type="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="signUpForm.value.email" [ngClass]="{'empty': !signUpForm.value.email}" required email>
+            <div *ngIf="signupForm.submitted && (signupForm.controls['email'].errors?.['required'] || signupForm.controls['email'].errors?.['email'])" class="text-danger">
+              <span *ngIf="signupForm.controls['email'].errors?.['required']">Email is required</span>
+              <span *ngIf="signupForm.controls['email'].errors?.['email']">Invalid email format</span>
+            </div>
           </div>
           <div class="form-group">
             <label for="password">Password  </label>
-            <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="signUpObj.password"  [ngClass]="{'empty': !signUpObj.password}" required>
-           
+            <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="signUpForm.value.password" [ngClass]="{'empty': !signUpForm.value.password}" required>
+            <div *ngIf="signupForm.submitted && signupForm.controls['password'].errors?.['required']" class="text-danger">Password is required</div>
           </div>
           <div class="form-group">
             <label for="c_password">Confirm Password  </label>
-            <input type="password" name="c_password" class="form-control" placeholder="********" [(ngModel)]="signUpObj.c_password" [ngClass]="{'empty': !signUpObj.c_password}" required>
-          
+            <input type="password" name="c_password" class="form-control" placeholder="********" [(ngModel)]="signUpForm.value.c_password" [ngClass]="{'empty': !signUpForm.value.c_password}" required>
+            <div *ngIf="signupForm.submitted && signupForm.controls['c_password'].errors?.['required']" class="text-danger">Confirm Password is required</div>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn btn-my" (click)="onRegister()" >Register</button>
-    
-          </div>
+            <button type="submit" class="btn btn-my">Register</button>
+          </div>          
           <div class="text-center login">
             Already have an account ? <a routerLink="/login">Login</a> 
           </div>

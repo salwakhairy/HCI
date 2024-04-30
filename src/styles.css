@@ -3,10 +3,7 @@
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
 @import url('../node_modules/simple-keyboard/build/css/index.css');
 @import 'ngx-toastr/toastr';
-body{
-  
- 
-}
+
 .container-fluid
 {
   background-color: #EEE6DE;
@@ -14,8 +11,8 @@ body{
   justify-content: center;
   align-items: center;
    height: 100vh;
-   
 }
+
 .auth-card {
   background: #c59d79;  /* fallback for old browsers */
   /* background: -webkit-linear-gradient(to right, #240b36, #A47245);  /* Chrome 10-25, Safari 5.1-6 */

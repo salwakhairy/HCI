@@ -3,29 +3,29 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
+import { OpeninngComponent } from './pages/openinng/openinng.component'; // Import the OpeningComponent
 
 const routes: Routes = [
   {
-    path:'',
-    component:LoginComponent
+    path: '',
+    component: OpeninngComponent // Set OpeningComponent as the default route
   },
   {
-    path:'login',
+    path: 'login',
     component: LoginComponent
   },
   {
-    path:'signup',
-    component:SignupComponent
+    path: 'signup',
+    component: SignupComponent
   },
   {
-    path:'home',
-    component:HomeComponent
+    path: 'home',
+    component: HomeComponent
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  declarations: [],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
