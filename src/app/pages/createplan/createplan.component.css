@@ -1,0 +1,110 @@
+body {
+    background-color: #ede5dd !important;
+  }
+  .container {
+    text-align: center;
+  }
+  
+  .header {
+   margin-top: 450px;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .search-container {
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: #ede5dd;
+  }
+  
+  .dropdown {
+    margin-right: 10px;
+    background-color: #573505;
+    color: white; /* Text color */
+    border-radius: 20px; /* Adjust the value to control the roundness */
+  }
+  .dropdown-select {
+    background-color: #573505; /* Light gray background on hover */
+  }
+  
+  .time-range {
+    display: flex;
+    align-items: center;
+  }
+  
+  .time-range label {
+    margin-right: 0px;
+  }
+  .meal-section {
+    margin-top: 40px;
+    background-color: #ddd2c5;
+    width: 1349px;
+   
+  }
+  
+  .meal-header {
+    text-align: center;
+  }
+  
+  .meal-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between meal cards */
+  }
+  
+  .meal-card {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #573505;
+    margin: 10px; /* margin around each meal card */
+  }
+  
+  .meal-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .follow-btn,
+  .fav-btn {
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    color: gold;
+    font-size: 20px;
+    margin: 0 1px;
+  }
+  
+  /* Responsiveness, basic example */
+  @media (max-width: 768px) {
+    .meal-cards {
+      flex-direction: row;
+    }
+  
+    .meal-card {
+      width: auto; /* Adjust width on smaller screens */
+    }
+  }
+  
