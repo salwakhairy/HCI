@@ -17,4 +17,10 @@
     /* Or you can use background color */
     /* background-color: #ffcccc; */
   }
+  label{
+    color: black;
+    font-weight: 700;
+    text-align: start;
+    padding: 10px;
+  }
   
