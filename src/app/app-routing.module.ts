@@ -5,6 +5,11 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
 import { OpeninngComponent } from './pages/openinng/openinng.component'; // Import the OpeningComponent
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { ShoppingcartComponent } from './pages/shoppingcart/shoppingcart.component';
+import { CreatePlanComponent } from './pages/createplan/createplan.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { NewmealComponent } from './pages/newmeal/newmeal.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -26,6 +31,26 @@ const routes: Routes = [
   {
     path:'favorite',
     component:FavoritesComponent
+  },
+  {
+    path:'cart',
+    component:ShoppingcartComponent
+  },
+  {
+    path:'plan',
+    component:CreatePlanComponent
+  },
+  {
+    path:'profile',
+    component:ProfileComponent
+  },
+  {
+    path:'new',
+    component:NewmealComponent
+  },
+  {
+    path:'setting',
+    component:SettingsComponent
   }
 ];
 

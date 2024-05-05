@@ -9,12 +9,26 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
+import { OpeninngComponent } from './pages/openinng/openinng.component';
+import { CreatePlanComponent } from './pages/createplan/createplan.component';
+import { ShoppingcartComponent } from './pages/shoppingcart/shoppingcart.component';
+import { StarRatingComponent } from './pages/star-rating/star-rating.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { NewmealComponent } from './pages/newmeal/newmeal.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    OpeninngComponent,
+    CreatePlanComponent,
+    ShoppingcartComponent,
+    StarRatingComponent,
+    ProfileComponent,
+    NewmealComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,12 +9,14 @@
 }
   
 .centered-image {
-    width: 80%; /* Adjust width as needed */
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
-    left: auto; /* Position at left edge */
-    right: auto; /* Remove right positioning */
+    left: 0;
+    top: 0;
 }
+
 
 .button-container {
     position: absolute;

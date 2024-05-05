@@ -1,0 +1,25 @@
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+  }
+  
+  .ingredient-type {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .ingredient-type h2 {
+    margin-top: 0;
+  }
+  
+  .ingredients {
+    margin-top: 10px;
+  }
+  
+  /* Optional: Style the ingredients within each type */
+  .ingredient {
+    margin-bottom: 5px;
+  }
+  

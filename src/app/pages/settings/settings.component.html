@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New meal form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .upload-photo-btn {
+      margin-left: 10px; /* Adjust the value as needed */
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card c formo my-2">
+          <p class="text-center Settings my-2">Account Settings</p>
+          <div class="card-body">
+            <form class="">
+              <div class="mb-3 row">
+                <label for="mealName" class="col-sm-3 col-form-label">Profile Name</label>
+                <div class="col-sm-9">
+                  <input placeholder="Enter The Profile Name ?" type="text" class="form-control" id="mealName">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="ingredients" class="col-sm-3 col-form-label">New Password</label>
+                <div class="col-sm-9">
+                  <input placeholder="Enter The Password" type="password" class="form-control" id="ingredients">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="cookingInstructions" class="col-sm-3 col-form-label">Confirm Password</label>
+                <div class="col-sm-9">
+                  <input placeholder="Confirm Your Password Please" type="password" class="form-control" id="cookingInstructions">
+                </div>
+              </div>
+              
+              <div class="mb-3 row">
+                <div class="col-sm-6">
+                  <input type="file" class="form-control visually-hidden" id="imageInput" accept="image/*">
+                  <i class="fas fa-image"></i> <!-- Font Awesome icon -->
+                  <label for="imageInput" class="photo">
+                    <span class="upload-photo-btn"> <!-- Adding a span to wrap the button -->
+                      <a>Change Photo</a>
+                    </span>
+                  </label>
+                </div>
+                <div class="col-sm-6 text-end">
+                  <button type="submit" class="btn btn-success custom-post-button">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

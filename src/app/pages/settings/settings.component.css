@@ -1,0 +1,16 @@
+.custom-post-button {
+    width: 150px; /* Adjust the width as needed */
+    border: 1px solid black; /* Add a black border */
+    background-color:hsl(36, 93%, 16%); /* Beige color */
+    color: white; /* Text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+.formo{
+    background-color: #f8f5f2;
+}
+.Settings{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+}
