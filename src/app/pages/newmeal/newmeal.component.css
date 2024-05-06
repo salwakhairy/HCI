@@ -1,0 +1,56 @@
+body {
+    background-color: #EEE6DE; /* Light gray background for the entire page */
+}
+
+.container {
+    width: 100vw; /* Full width of the viewport */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Custom styles for the form */
+.card {
+    background-color: #DCD1C4; /* Light gray background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+.Settings {
+    font-size: 1.5rem; /* Larger font size for the title */
+    font-weight: bold; /* Bold title */
+}
+
+.form-control {
+    border-radius: 10px; /* Rounded input fields */
+}
+
+.upload-photo-btn a {
+    text-decoration: none; /* Remove underline from the link */
+    color: #573505; /* Green color for the link text */
+}
+
+.custom-post-button {
+    border-radius: 10px; /* Rounded button */
+    padding: 0.5rem 1.5rem; /* Padding inside the button */
+    font-size: 1rem; /* Font size of the button text */
+    background-color: #573505; /* Green background color */
+    border: none; /* Remove border */
+}
+
+.custom-post-button:hover {
+    background-color: #573505; /* Darker green color on hover */
+}
+.custom-previous-button {
+    border-radius: 10px; /* Rounded button */
+    padding: 0.5rem 1.5rem; /* Padding inside the button */
+    font-size: 1rem; /* Font size of the button text */
+    background-color: #573505; /* Green background color */
+    margin-right: 10px; /* Add margin to the right of the "Previous" button */
+    border: none; /* Remove border */
+}
+
+.custom-previous-button:hover {
+    background-color: #573505; /* Darker green color on hover */
+}

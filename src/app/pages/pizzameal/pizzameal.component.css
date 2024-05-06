@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#ECE4DC;
+}
+
+header {
+    background-color:#ECE4DC;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    width: 70vw; /* Set the width to 80% of the viewport width */
+    margin: 0 auto; /* Center the main content */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold; /* Make all headers bold */
+}
+
+#recipe-info {
+    margin-bottom: 20px;
+}
+#recipe-info p {
+    font-weight: bold; /* Make the Cuisine text bold */
+    font-size: 27px; /* Increase the font size */
+}
+
+
+
+#recipe-info h2 {
+    text-align: center;
+}
+
+#cooking-time,
+#ratings {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#ingredients {
+    margin-bottom: 20px;
+}
+
+#ingredients h2 {
+    text-align: center;
+}
+
+
+#ingredients ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ingredients li {
+    margin-bottom: 5px;
+}
+
+#instructions {
+    margin-bottom: 20px;
+}
+
+#instructions ol {
+    list-style: decimal;
+    padding: 20px;
+}
+
+#koshari-image {
+    float: left; /* Float the image to the left */
+    margin-right: 20px; /* Add some space between the image and the text */
+    width: 500px; /* Set the width of the image */
+}
+
+.rating-stars span {
+    color: yellow; /* Set the color of the stars to yellow */
+    font-size: 24px; /* Set the font size of the stars */
+}

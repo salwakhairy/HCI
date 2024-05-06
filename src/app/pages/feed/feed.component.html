@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feed Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <div class="search-container">
+        <input type="text" placeholder="Search with ingredients..." />
+        <button type="button">Search</button>
+      </div>
+      <div class="dropdown">
+        <select class="dropdown-select">
+
+          <option value="">Select Cuisine</option>
+          <option value="option1">Egyption Kitchen </option>
+          <option value="option2">spanish  Kitchen </option>
+          <option value="option3">Italian  Kitchen </option>
+
+        </select>
+      </div>
+      <div class="time-range">
+        <label for="start-time">Start Time (minutes):</label>
+        <input
+          type="text"
+          id="start-time"
+          name="start-time"
+          pattern="[1-5]?[0-9]|60"
+          title="Please enter a number between 0 and 60"
+          placeholder="  from  "
+        />
+        <label for="end-time">End Time (minutes):</label>
+        <input
+          type="text"
+          id="end-time"
+          name="end-time"
+          pattern="[1-5]?[0-9]|60"
+          title="Please enter a number between 0 and 60"
+          placeholder="    to   "
+
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="meal-section">
+    <div class="meal-cards">
+      <!-- Breakfast meal cards -->
+      <div class="meal-card" (click)="goToKoushariPage()">
+        <img src="assets/koushari.jpg" alt="Dinner 2" />
+        <p>Lunch 2</p>
+        <button type="button">Follow</button>
+        <app-star-rating [maxRating]="5" [currentRating]="3"></app-star-rating>
+        <button type="button">Add to Fav </button>
+      </div>
+      
+      <div class="meal-card" (click)="goToKoushariPage()">
+        <img src="assets/koushari.jpg" alt="Dinner 2" />
+        <p>Breakfast 2</p>
+        <button type="button">Follow</button>
+        <app-star-rating [maxRating]="5" [currentRating]="3"></app-star-rating>
+        <button type="button">Add to Fav </button>
+      </div>
+      
+      <!-- Lunch meal cards -->
+      <div class="meal-card" (click)="goToPizzaImagePage()">
+        <img src="assets/pizzaimage.jpg" alt="Dinner 2" />
+        <p>Lunch 2</p>
+        <button type="button">Follow</button>
+        <app-star-rating [maxRating]="5" [currentRating]="3"></app-star-rating>
+        <button type="button">Add to Fav </button>
+      </div>
+      
+      <!-- Dinner meal cards -->
+      <div class="meal-card" (click)="goToPizzaImagePage()">
+        <img src="assets/pizzaimage.jpg" alt="Dinner 2" />
+        <p>Breakfast 2</p>
+        <button type="button">Follow</button>
+        <app-star-rating [maxRating]="5" [currentRating]="3"></app-star-rating>
+        <button type="button">Add to Fav </button>
+      </div>
+      
+
+      <div class="meal-card" (click)="goToshawrmaImagePage() ">
+        <img src="assets/shawrma.jpg" alt="Dinner 2" />
+        <p>Dinner 2</p>
+        <button type="button">Follow</button>
+        <app-star-rating [maxRating]="5" [currentRating]="3"></app-star-rating>
+        <button type="button">Add to Fav </button>
+      </div>
+      
+
+      <div class="meal-card" (click)="goToshawrmaImagePage() ">
+        <img src="assets/shawrma.jpg" alt="Dinner 2" />
+        <p>Breakfast 2</p>
+        <button type="button">Follow</button>
+        <app-star-rating [maxRating]="5" [currentRating]="3"></app-star-rating>
+        <button type="button">Add to Fav </button>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

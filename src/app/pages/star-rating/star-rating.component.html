@@ -1,0 +1,4 @@
+<span class="star" *ngFor="let star of stars" [class.full]="star <= currentRating" (click)="setRating(star)">
+    &#9733; <!-- Full star character -->
+  </span>
+  

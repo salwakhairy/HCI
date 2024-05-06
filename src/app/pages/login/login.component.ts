@@ -24,7 +24,7 @@ export class LoginComponent {
       if (loggedInUser !== undefined) {
         this.toastr.success('User Found...');
         localStorage.setItem('loggedUser', JSON.stringify(loggedInUser));
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/feed');
       } else {
         this.toastr.error('No User Found');
       }

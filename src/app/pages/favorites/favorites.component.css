@@ -1,6 +1,7 @@
 :host { 
-    display: contents; 
-  }
+  display: contents; 
+}
+
   .home-container {
     width: 100%;
     display: flex;
@@ -13,18 +14,17 @@
     max-width: 100%;
   }
   .home-container1 {
-    top: 40px;
-    left:345px;
     width: 1000px;
     height: 600px;
     overflow: auto;
-    position:absolute;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background:rgb(220, 209, 196);
-    border-radius:20px;
-  }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(220, 209, 196);
+    border-radius: 20px;
+}
+
   .home-li {
     position: relative;
     width:800px;
